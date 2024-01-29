@@ -2,6 +2,9 @@
 
 {% block body %}
     <h1>**   TP Symfony   **</h1>
+    {% if (app.user) %}
+       <h2>bonjour {{ app.user.firstname }} !</h2>
+    {% endif %}
 {% endblock %}
 
 {% block title %}{{ parent() }} | Home {% endblock %}
